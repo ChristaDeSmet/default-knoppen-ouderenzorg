@@ -135,10 +135,11 @@
 
     (Bevestigen van scherm zonder opslaan)
   </div>
-  <!-- ----------------------------- andere-->
+  <!-- ----------------------------- memo-->
 
-  <div style="display:flex; margin-top:10px">
-    <div class="col-md-6 padding-none white-space-nowrap">
+
+    <div style="display:flex; margin-top:10px ">
+    <div class="col-md-6 padding-none white-space-nowrap margin-right-sm">
       <label class="switch margin-right-sm">
         <input
           (click)="sw_memo_true = !sw_memo_true"
@@ -149,21 +150,19 @@
       </label>
       <span>Memo</span>
     </div>
-    <div class="col-md-6 padding-none white-space-nowrap">
+    <div class="col-md-6 padding-none white-space-nowrap margin-right-sm">
       <label class="switch margin-right-sm">
         <input
           (click)="sw_memo_false = !sw_memo_false"
           type="checkbox"
-          [checked]="!sw_memo_false"
+          [checked]="sw_memo_false"
         />
         <span [ngClass]="getBoolClass()" class="slider round"></span>
       </label>
       <span>Memo</span>
     </div>
-
-    geselecteerd = blauw
   </div>
-
+<!-- --------NAVIGATIE-->
   <br />
   <div><b> Navigatie </b></div>
 </div>
@@ -199,7 +198,7 @@
 <div style="display:flex; margin-top:10px">
   <div style="width:80px">
     <div class="oz-knop margin-right-sm">
-      <i class="fa-solid fa-backward-fast"></i>
+      <i class="fas fa-fast-backward"></i>
     </div>
   </div>
   Top
@@ -208,16 +207,16 @@
 <div style="display:flex; margin-top:10px">
   <div style="width:80px">
     <div class="oz-knop margin-right-sm">
-      <i class="fa-solid fa-forward-fast"></i>
+      <i class="fas fa-fast-forward"></i>
     </div>
   </div>
   Bottom
 </div>
-<!-- ----------------------------- loadingt-->
+<!-- ----------------------------- loading-->
 <div style="display:flex; margin-top:10px">
   <div style="width:80px">
     <div class="oz-knop margin-right-sm">
-      <i class="fa-solid fa-spinner"></i>
+      <i class="fas fa-circle-notch"></i>
     </div>
   </div>
   loading
