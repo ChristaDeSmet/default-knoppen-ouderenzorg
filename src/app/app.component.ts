@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent  {
   name = 'Angular';
+  sw_memo_false = false;
+  sw_memo_true = true;
 }

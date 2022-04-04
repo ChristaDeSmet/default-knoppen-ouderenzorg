@@ -1408,3 +1408,582 @@ a {
 .border {
   border: 1px solid @color-border;
 }
+
+
+
+.modal-backdrop-modal {
+  //todo kijken om te combineren met .modal-backdrop-container
+  padding: 25px;
+  border-radius: 3px;
+  height: auto !important;
+  color: #333333;
+  z-index: 9999;
+  background: #fff !important;
+  position: fixed;
+  overflow: hidden;
+  display: block;
+  margin-top: 25px;
+  font-size: 16px;
+  margin-left: 25px;
+  margin-right: 25px;
+  max-width: calc(~"100vw - 60px");
+}
+
+.modal-backdrop-container {
+  display: none;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(80, 80, 80, 0.4);
+  z-index: 1000;
+  border-radius: 5px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.modal-backdrop-overlay {
+  display: block;
+}
+
+.HideIfNotSmallWindow {
+  //tablet : enkel rechterkant, meerdere blokken mogelijk
+  @media screen and (min-width: @smallwindow-grens) {
+    display: none !important;
+  }
+}
+
+.HideIfSmallWindow {
+  //smartphone : volle breedte
+  @media screen and (max-width: @smallwindow-grens) {
+    display: none !important;
+  }
+}
+
+.HideIfHorizontal {
+    @media all and (orientation: landscape) {
+        display: none !important;
+    }
+}
+
+.HideIfVertical {
+  @media all and (orientation: portrait) {
+    display: none !important;
+  }
+}
+
+/*COMMON FLEX*/
+.oz-flexboxcontainer-basis {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  list-style-type: none;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+}
+
+.oz-flexboxcontainer-row-nowrap-spacearround {
+  .oz-flexboxcontainer-basis;
+  -webkit-flex-flow: row nowrap;
+  -moz-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
+.oz-flexboxcontainer-column-nowrap-flexstart {
+  .oz-flexboxcontainer-basis;
+  -webkit-flex-flow: column nowrap;
+  -moz-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}
+
+/*COMMON DIVERSE*/
+
+.oz-knop-general {
+  color: @color-mid-blue;
+  background: lighten(@color-font-header, 30%);
+  .border();
+  padding: 8px;
+  overflow: hidden;
+  text-align: center;
+
+  @media screen and (max-width: @smallwindow-grens) {
+    font-size: 12px !important;
+  }
+}
+
+.oz-knop-action {
+  font-size: 20px;
+  border-radius: 50%;
+  height: 40px;
+  width: 50px;
+  line-height: 24px;
+}
+
+#oz-toevoegen-knop {
+  // color: @color-mid-blue;
+  // background: lighten(@color-font-header,30%);
+  // padding: 8px;
+  // .border;
+  .oz-knop-general();
+  .oz-knop-action();
+
+  // overflow: hidden;
+  // border-radius: 50%;
+  // height: 40px;
+  // width: 50px;
+  // text-align: center;
+  // font-size: 20px;
+  // line-height: 24px;
+}
+
+.oz-knop-rond {
+  .oz-knop-general();
+  .oz-knop-action();
+  // color: #007cb4;
+  // background: #f6f6f6;
+  // padding: 8px;
+  // border: 1px solid #666;
+
+  // overflow: hidden;
+  // border-radius: 50%;
+  // height: 40px;
+  // width: 50px;
+  // text-align: center;
+  // font-size: 20px;
+  // line-height: 24px;
+}
+
+.oz-knop-text {
+  .oz-knop-general();
+  border-radius: 15px;
+  margin-right: 10px;
+
+  // padding: 8px;
+  // border: 1px solid #666;
+  // border-radius: 15px;
+  // text-align: center;
+  // color: #007cb4;
+  // background: #f6f6f6;
+}
+
+.oz-color-knop-ok {
+  color: green; // darkgreen;
+}
+
+.oz-color-knop-cancel {
+  color: red; //darkred;
+}
+
+.oz-line-through {
+  text-decoration: line-through;
+}
+
+.katz-bol {
+  color: #fff;
+  font-size: 12px;
+  border: 2px solid #fff;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: @katz-kleur-basis;
+  line-height: 20px;
+  text-align: center;
+}
+
+.DNR-bol {
+  color: #fff;
+  font-size: 12px;
+  border: 2px solid #fff;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: @color-light-grey;
+  line-height: 20px;
+  text-align: center;
+}
+
+.katz-kleur-0 {
+  background-color: @katz-kleur-0;
+}
+
+.katz-kleur-A {
+  background-color: @katz-kleur-A;
+}
+
+.katz-kleur-B {
+  background-color: @katz-kleur-B;
+}
+
+.katz-kleur-C {
+  background-color: @katz-kleur-C;
+}
+
+.katz-kleur-Cd {
+  background-color: @katz-kleur-Cd;
+}
+
+.DNR-kleur-A {
+  background-color: @DNR-kleur-A;
+}
+
+.DNR-kleur-B {
+  background-color: @DNR-kleur-B;
+}
+
+.DNR-kleur-C {
+  background-color: @DNR-kleur-C;
+}
+#take-picture {
+  position: absolute;
+  background: black;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  .change-camera {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+  }
+
+  .buttons {
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
+
+    .oz-knop {
+      width: 200px !important;
+    }
+  }
+}
+
+.picture-thumbs {
+  margin: 0px;
+  padding: 12px 0px 0px 0px;
+
+  li {
+    list-style-type: none;
+    // margin-right: 12px;
+    float: left;
+
+    img {
+      border: 2px solid @color-light-grey;
+      border-right: none;
+      height: 80px;
+    }
+  }
+  li:last-child {
+    border-right: 2px solid @color-light-grey;
+  }
+}
+
+.extra-fotoos {
+  float: left;
+  position: relative;
+  // padding: 30px;
+  //  background-color: rgba(250, 250, 250, 0.5);
+}
+.picture-thumb-next {
+  position: absolute;
+  padding: 25px;
+  font-size: 25px;
+  width: 120px;
+  height: 80px;
+  background-color: rgba(250, 250, 250, 0.5);
+}
+
+.picture-thumb {
+  transition: all 0.2s ease-in-out;
+}
+
+.picture-thumb.grow {
+  //transform: rotate(90deg);
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+#image-viewer {
+  background: black;
+  display: none;
+}
+#image-viewer.grow {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.oz-keuze-knop {
+  background: lighten(@color-font-header, 30%);
+  color: @color-mid-blue;
+  text-align: center;
+  border: solid;
+  border-color: @color-mid-blue;
+  border-width: 1px;
+  border-radius: 4px;
+  font-size: 16px !important;
+}
+
+.oz-keuze-knoppen {
+  .oz-keuze-knop();
+
+  margin-top: @medium-distance;
+  margin-right: 2%;
+  display: normal;
+  padding: 1.5 * @small-distance;
+  height: 2 * @medium-distance;
+  max-width: 100px;
+}
+
+.oz-keuze-twee-knoppen {
+  .oz-keuze-knoppen;
+  margin: 0 15px !important;
+  padding: 0 !important;
+
+  @media screen and (max-width: @smallwindow-grens) {
+    margin: 0 !important;
+  }
+}
+
+.oz-keuze-knoppen:last-child {
+  margin-right: 0;
+}
+
+#change-status {
+  height: 0;
+  overflow: hidden;
+  /*.oz-ok-cancel-knop {
+    background: lighten(@color-font-header,30%);
+    padding: 1.5*@small-distance;
+    height: 2*@medium-distance;
+    opacity: 1 !important;*/
+  /*}*/
+  .oz-knop {
+    height: 0;
+  }
+}
+
+#enter-parameter-value {
+  /*.modal-backdrop-screen;*/
+  max-width: 100%;
+}
+
+#voeg-commentaar-toe {
+  /*.modal-backdrop-screen;*/
+  margin-left: 5px;
+
+  input {
+    //height:24px;
+    margin-top: 15px !important;
+    font-size: 16px !important;
+    padding-left: 4px;
+    padding-right: 4px;
+    width: calc(~"100vw - 100px");
+  }
+
+  .oz-keuze-annuleer-knop {
+    .oz-keuze-knoppen;
+    width: 45%;
+    height: auto;
+  }
+
+  .oz-keuze-icoon-knop {
+    .oz-keuze-knoppen;
+    width: 22%;
+    height: auto;
+  }
+}
+
+#oz-message {
+  /*.modal-backdrop-screen;*/
+  margin-left: 5px;
+
+  .message {
+    //height:24px;
+    margin-top: 15px !important;
+    font-size: 16px !important;
+    padding-left: 4px;
+    padding-right: 4px;
+    width: calc(~"100vw - 100px");
+  }
+}
+
+/* Problem solved with arrows ngx gallery and other modals */
+.ngx-gallery-arrow-wrapper {
+  z-index: 1000 !important;
+}
+
+/* Loginscherm */
+loginnamed {
+  display: block;
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px 20px;
+
+  .has-error .help-block {
+    color: #721c24;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  #loginId,
+  #password {
+    width: 100%;
+  }
+
+  #btnOk {
+    width: 100%;
+  }
+
+  .has-error.col-sm-offset-2 {
+    margin-left: 0 !important;
+  }
+
+  #btnCancel {
+    display: none;
+  }
+
+  #btnOk {
+    display: block;
+    color: #666666;
+    height: 40px;
+    font-size: 16px !important;
+    border: 1px solid #999999;
+    background-color: #d3d5db;
+    text-transform: uppercase;
+  }
+
+  .control-label {
+    margin-bottom: 0;
+    padding-top: 7px;
+    text-transform: uppercase;
+    font-size: 13px;
+  }
+}
+
+.ng-valid[required],
+.ng-valid.required {
+  border-left: 5px solid #42a948; /* green */
+}
+
+.ng-invalid:not(form) {
+  border-left: 5px solid #a94442; /* red */
+}
+
+/* Login component styling */
+@media only screen and (min-width: 768px) {
+  /* Loginscherm */
+  loginnamed {
+    max-width: 600px;
+    margin: 3% auto;
+    #btnOk {
+      width: 460px;
+      margin-left: 15px;
+    }
+    .control-label {
+      text-align: right;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  loginnamed {
+    background: #fff;
+    margin: 3% 15px;
+
+    .form-group {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+    .col-sm-10,
+    .col-sm-2 {
+      width: 100% !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
+
+  /* Keuze type login scherm */
+  .row-login {
+    width: auto !important;
+    display: block !important;
+  }
+  .csam-aanmeld-container {
+    float: none !important;
+    margin: 20px auto 0 auto !important;
+    width: auto !important;
+    padding: 0 15px;
+
+    .csam-aanmeld-container__box {
+      width: auto !important;
+      border: none !important;
+      box-shadow: none !important;
+
+      .csam-aanmeld--icon {
+        display: none !important;
+      }
+    }
+
+    .csam-aanmeld--content {
+      float: none !important;
+      width: auto !important;
+      border-radius: 5px;
+    }
+
+    .csam-aanmeld--info {
+      display: none;
+    }
+  }
+}
+
+/* Display List component styling */
+.display-list-item {
+  font-size: 16px;
+
+  .display-list-item-header-rounded {
+    border-radius: 5px !important;
+  }
+
+  .display-list-item-header {
+    background: @color-box-background;
+    font-style: italic;
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+
+    .toggle-description {
+      margin-right: 15px;
+      cursor: pointer;
+    }
+  }
+
+  .display-list-item-description {
+      padding: 5px 10px;
+      border-style: solid;
+      border-width: 0 2px 2px;
+      border-radius: 0 0 5px 5px;
+      border-color: @color-box-background;
+  }
+}
+
+.padding-0 {
+  padding: 0 !important;
+}
