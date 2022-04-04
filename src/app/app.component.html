@@ -11,6 +11,7 @@
     class="btn btn-secondary margin-right-sm">
     <i class="fas fa-undo-alt margin-right-sm"></i>Terug
   </button>
+  <button type="button" title="Haal lijst op" class="btn btn-default"><i class="fas fa-undo-alt"></i></button>
   (Terug/annuleer)
   </div>
   <!-- ----------------------------- OPSLAAN-->
@@ -23,6 +24,7 @@
     class="btn btn-secondary margin-right-sm">
     <i class="fas fa-save margin-right-sm"></i>Opslaan
   </button>
+  <button type="button" title="Haal lijst op" class="btn btn-default"><i class="fas fa-save"></i></button>
   (Opslaan, sla op, bewaar)
   </div>
   <!-- ----------------------------- Verwijder-->
@@ -37,6 +39,7 @@
     class="btn btn-secondary margin-right-sm "    >
     <i class="fas fa-trash-alt margin-right-sm"></i>Verwijder
   </button>
+  <button type="button" title="Haal lijst op" class="btn btn-default"><i class="fas fa-trash-alt"></i></button>
   (Verwijder, Schrap)
   </div>
     <!-- ----------------------------- WIJZIG-->
@@ -50,6 +53,7 @@
   class="btn btn-secondary margin-right-sm">
   <i class="fas fa-pen margin-right-sm"></i>Wijzig
 </button>
+<button type="button" title="Haal lijst op" class="btn btn-default"><i class="fas fa-pen"></i></button>
 (Wijzig, Editeer)
 </div>
     <!-- ----------------------------- Sorteer-->
@@ -64,6 +68,7 @@
   class="btn btn-secondary margin-right-sm">
   <i class="fas fa-sort margin-right-sm"></i>Sorteer
 </button>
+<button type="button" title="Haal lijst op" class="btn btn-default"><i class="fas fa-sort"></i></button>
 (sorteer)
 </div>
 
@@ -71,13 +76,15 @@
 <div  style=" margin-top:10px">
 <button type="button" 
 class="btn btn-default margin-right-sm">
-<i class="fa-solid fa-magnifying-glass fa-undo-alt margin-right-sm"></i>Zoek
+<i class="fas fa-search  margin-right-sm"></i>Zoek
 </button>
 
 <button type="button" 
 class="btn btn-secondary margin-right-sm">
-<i class="fas fa-undo-alt margin-right-sm"></i>Zoek
+<i class="fas fa-search margin-right-sm"></i>Zoek
 </button>
+<button type="button" title="Haal lijst op" class="btn btn-default"><i class="fas fa-search"></i></button>
+
 (Ga naar zoekscherm om een selectie te maken)
 </div>
 <!-- ----------------------------- Filter-->
@@ -91,6 +98,7 @@ class="btn btn-default margin-right-sm">
 class="btn btn-secondary margin-right-sm">
 <i class="fas fa-filter margin-right-sm"></i>Filter
 </button>
+<button type="button" title="Haal lijst op" class="btn btn-default"><i class="fas fa-filter"></i></button>
 (Filter, geef alle zoekcriteria op)
 </div>
 <!-- ----------------------------- Meer-->
@@ -105,6 +113,7 @@ class="btn btn-default margin-right-sm">
 class="btn btn-secondary margin-right-sm">
 <i class="fas fa-ellipsis margin-right-sm"></i>Meer
 </button>
+<button type="button" title="Haal lijst op" class="btn btn-default"><i class="fas fa-more"></i></button>
 (Meer, andere opties)
 </div>
 <!-- ----------------------------- Afdrukken-->
@@ -118,6 +127,7 @@ class="btn btn-default margin-right-sm">
 class="btn btn-secondary margin-right-sm">
 <i class="fas fa-print margin-right-sm"></i>Afdrukken
 </button>
+<button type="button" title="Haal lijst op" class="btn btn-default"><i class="fas fa-print"></i></button>
 (Afdruk, Afdrukken, Print)
 </div>
 
@@ -126,25 +136,29 @@ class="btn btn-secondary margin-right-sm">
   <div  style="display:flex; margin-top:10px">
   <button type="button" 
   class="btn btn-default margin-right-sm">
-  <i class="fas fa-print margin-right-sm"></i>OK
+  OK
   </button>
   
   <button type="button" 
   class="btn btn-secondary margin-right-sm">
-  <i class="fas fa-print margin-right-sm"></i>OK
+  OK
   </button>
+
   (Bevestigen van scherm zonder opslaan)
   </div>
     <!-- ----------------------------- andere-->
-  <div> (Selecteer) </div>
-  <div> 
-  <div _ngcontent-oxd-c328="" class="col-md-6 padding-none white-space-nowrap"><label _ngcontent-oxd-c328="" class="switch margin-right-sm"><input _ngcontent-oxd-c328="" type="checkbox" disabled=""><span _ngcontent-oxd-c328="" class="slider round disabled-btn" ng-reflect-ng-class="disabled-btn "></span></label><span _ngcontent-oxd-c328="" popover="Diagnostisch Bilan." container="body" triggers="mouseenter:mouseleave" placement="top" ng-reflect-popover="Diagnostisch Bilan." ng-reflect-container="body" ng-reflect-triggers="mouseenter:mouseleave" ng-reflect-placement="top">Tonen in memo </span><!--container--></div>
 
- </div>
-    <div> (keuze bevestigen) </div>
-    <div> (loading) </div>
-    <div> (Genereer) </div>
+
+  <div  style="display:flex; margin-top:10px">
+
+  <div _ngcontent-oxd-c328="" class="col-md-6 padding-none white-space-nowrap"><label _ngcontent-oxd-c328="" class="switch margin-right-sm"><input _ngcontent-oxd-c328="" type="checkbox 
+    " disabled=""><span _ngcontent-oxd-c328="" class="slider round disabled-btn" ng-reflect-ng-class="disabled-btn "></span></label><span _ngcontent-oxd-c328="" popover="Memo." container="body" triggers="mouseenter:mouseleave" placement="top" ng-reflect-popover="Memo." ng-reflect-container="body" ng-reflect-triggers="mouseenter:mouseleave" ng-reflect-placement="top">Memo </span><!--container--></div> 
   
+
+geselecteerd = blauw
+</div>
+
+ 
   
   <br>
   <div> <b> Navigatie </b></div>
@@ -153,32 +167,68 @@ class="btn btn-secondary margin-right-sm">
 </div>
 <!-- ----------------------------- NEXT-->
   <div style="display:flex; margin-top:10px">
-    Vorige
+
     <div style="width:80px">
       <div class="oz-knop margin-right-sm">
         <i class="fa fa-arrow-left"></i> 
       </div>
     </div>
-  </div>
+    Vorige
+    </div>
   <!-- ----------------------------- NEXT-->
   <div  style="display:flex; margin-top:10px">
-  Volgende<div style="width:80px">
+  <div style="width:80px">
     <div class="oz-knop margin-right-sm">
       <i class="fa fa-arrow-right"></i>
     </div>
   </div>
+  Volgende
 </div>  <!-- ----------------------------- HOME-->
   <div  style="display:flex; margin-top:10px">
-    Home <div style="width:80px">
+    <div style="width:80px">
       <div class="oz-knop margin-right-sm">
         <i class="fa fa-home"></i>
       </div>
     </div>
-
+    Home
   </div>
 
-  <div> top </div>
-  <div> Bottom </div>
+<!-- ----------------------------- Top -->
+<div  style="display:flex; margin-top:10px">
+  <div style="width:80px">
+    <div class="oz-knop margin-right-sm">
+      <i class="fa-solid fa-backward-fast"></i>
+    </div>
+  </div>
+  Top
+</div>
+<!-- ----------------------------- bottom -->
+<div  style="display:flex; margin-top:10px">
+<div style="width:80px">
+  <div class="oz-knop margin-right-sm">
+    <i class="fa-solid fa-forward-fast"></i>
+  </div>
+</div>
+Bottom
+</div>
+<!-- ----------------------------- loadingt-->
+<div  style="display:flex; margin-top:10px">
+<div style="width:80px">
+  <div class="oz-knop margin-right-sm">
+    <i class="fa-solid fa-spinner"></i>
+  </div>
+</div>
+loading
+</div>
+
+<!-- ----------------------------- nieuw-->
+
+<div  style="display:flex; margin-top:10px">
+<button _ngcontent-oxd-c401="" id="oz-toevoegen-knop" ng-reflect-rbac-authentization="502365"><i _ngcontent-oxd-c401="" class="fa pointer fa-plus"></i></button>
+Nieuw
+</div>
+
+
 
   <br>
   <div> <b> KLEUREN </b></div>
