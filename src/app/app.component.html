@@ -135,38 +135,11 @@
 
     (Bevestigen van scherm zonder opslaan)
   </div>
-  <!-- ----------------------------- memo-->
-
-
-    <div style="display:flex; margin-top:10px ">
-    <div class="col-md-6 padding-none white-space-nowrap margin-right-sm">
-      <label class="switch margin-right-sm">
-        <input
-          (click)="sw_memo_true = !sw_memo_true"
-          type="checkbox"
-          [checked]="sw_memo_true"
-        />
-        <span [ngClass]="getBoolClass()" class="slider round"></span>
-      </label>
-      <span>Memo</span>
-    </div>
-    <div class="col-md-6 padding-none white-space-nowrap margin-right-sm">
-      <label class="switch margin-right-sm">
-        <input
-          (click)="sw_memo_false = !sw_memo_false"
-          type="checkbox"
-          [checked]="sw_memo_false"
-        />
-        <span [ngClass]="getBoolClass()" class="slider round"></span>
-      </label>
-      <span>Memo</span>
-    </div>
 
 <!-- --------NAVIGATIE-->
-  <br />
+<br/>
   <div><b> Navigatie </b></div>
 
-</div>
 <!-- ----------------------------- NEXT-->
 <div style="display:flex; margin-top:10px">
   <div style="width:80px">
@@ -226,6 +199,7 @@
 <!-- ----------------------------- nieuw-->
 
 <div style="display:flex; margin-top:10px">
+<div style="width:80px">
   <button
     _ngcontent-oxd-c401=""
     id="oz-toevoegen-knop"
@@ -233,9 +207,87 @@
   >
     <i _ngcontent-oxd-c401="" class="fa pointer fa-plus"></i>
   </button>
+</div>
   Nieuw
 </div>
 
+
+
+<!-- ----------------------------- overleden-->
+<div style="display:flex; margin-top:10px">
+<div style="width:200px">
+overleden <i class="fas fa-cross"></i></div>
+</div>
+<!-- --------VELDEN-->
+<br/>
+  <div><b> Velden (nog niet ok)</b></div>
+
+  <!-- ----------------------------- checkbox -->
+  <div style="display:flex; margin-top:10px ">
+  <div class="col-md-6 padding-none white-space-nowrap margin-right-sm">
+    <label class="switch margin-right-sm">
+      <input
+        (click)="sw_memo_true = !sw_memo_true"
+        type="checkbox"
+        [checked]="sw_memo_true"
+      />
+      <span [ngClass]="getBoolClass()" class="slider round"></span>
+    </label>
+    <span>Checkbox</span>
+  </div>
+  <div class="col-md-6 padding-none white-space-nowrap margin-right-sm">
+    <label class="switch margin-right-sm">
+      <input
+        (click)="sw_memo_false = !sw_memo_false"
+        type="checkbox"
+        [checked]="sw_memo_false"
+      />
+      <span [ngClass]="getBoolClass()" class="slider round"></span>
+    </label>
+    <span>checkbox</span>
+  </div>
+</div>
+  <!-- ----------------------------- Datumveld -->
+  <div style="display:flex; margin-top:20px">
+    <input popovertitle="Fout" container="body" triggers="" containerclass="popover-error" placement="auto" type="date" class="form-control ng-pristine ng-valid ng-star-inserted ng-touched" ng-reflect-popover-title="Fout" ng-reflect-container="body" ng-reflect-triggers="" ng-reflect-container-class="popover-error" ng-reflect-placement="auto" ng-reflect-is-open="false" ng-reflect-model="2019-11-27"> Datumveld
+</div>
+
+
+  <!-- ----------------------------- dropdown -->
+  <div style="display:flex; margin-top:20px">
+  <select _ngcontent-usi-c398="" id="reason" name="ReasonCode" required="" class="form-control ng-dirty ng-valid ng-touched" ng-reflect-required="" ng-reflect-name="ReasonCode" ng-reflect-model="KATZSCORE"><option _ngcontent-usi-c398="" value="null" disabled="" ng-reflect-value="null">-- Selecteer een waarde --</option><option _ngcontent-usi-c398="" value="1: ARTS" ng-reflect-ng-value="ARTS" class="ng-star-inserted"> Vraag van arts </option><option _ngcontent-usi-c398="" value="2: DEMENTSCRN" ng-reflect-ng-value="DEMENTSCRN" class="ng-star-inserted"> Screening dementie </option><option _ngcontent-usi-c398="" value="3: KATZSCORE" ng-reflect-ng-value="KATZSCORE" class="ng-star-inserted"> ifv Katzscore </option><option _ngcontent-usi-c398="" value="4: OPNAME" ng-reflect-ng-value="OPNAME" class="ng-star-inserted"> Opname </option><option _ngcontent-usi-c398="" value="5: RIZIV" ng-reflect-ng-value="RIZIV" class="ng-star-inserted"> Tussenkomst Riziv </option><!--bindings={
+    "ng-reflect-ng-for-of": "[object Object],[object Object"
+  }--></select> dropdown
+   </div>
+  <!-- ----------------------------- tekst -->
+<div style="display:flex; margin-top:20px">
+<textarea name="Remark" class="form-control ng-pristine ng-valid ng-touched" ng-reflect-name="Remark"></textarea>tekst
+</div>
+  <!-- ----------------------------- radiobutton -->
+  <div style="display:flex; margin-top:20px">
+  todo radiobutton
+  </div>
+    <!-- ----------------------------- duimpjes -->
+<div style="display:flex; margin-top:20px">
+<div class="col-sm-3 col-5 text-center thumbs flex-row"><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><div class="circle col-padding-10 ng-star-inserted" style="background-color: rgb(215, 25, 27);"><i class="fa fa-minus"></i></div><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><i class="fa-thumbs-down pointer ng-star-inserted far" style="color: rgb(187, 187, 187);"></i><i class="fa-thumbs-up pointer ng-star-inserted fa" style="color: rgb(187, 187, 187);"></i><!--ng-container--><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><!--ng-container--><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--></div> todo duimpjes
+</div>
+  <!-- ----------------------------- xxx -->
+  <div style="display:flex; margin-top:20px">
+
+</div>
+  
+
+    <!-- ----------------------------- Kleuren -->
 <br />
 <div><b> KLEUREN </b></div>
 
@@ -251,5 +303,4 @@
   <button type="button" class="btn">x</button>
 
   <button type="button" class="btn btn-link">Link</button>
-</div>
 </div>
