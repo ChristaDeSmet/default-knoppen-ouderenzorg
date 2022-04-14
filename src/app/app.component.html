@@ -57,7 +57,7 @@
   <!-- ----------------------------- Sorteer-->
   <div style=" margin-top:10px">
     <button type="button" class="btn btn-default margin-right-sm">
-      <i class="fa solid fa-sort margin-right-sm"></i>Sorteer
+      <i class="fa solid fa-sort margin-right-sm"></i>Sorteer 
     </button>
 
     <button type="button" class="btn btn-secondary margin-right-sm">
@@ -66,7 +66,7 @@
     <button type="button" title="Haal lijst op" class="btn btn-default">
       <i class="fas fa-sort"></i>
     </button>
-    (sorteer)
+    (sorteer: indien pro licentie pijltjes -> fas fa-sort-alt)
   </div>
 
   <!-- ----------------------------- Zoek-->
@@ -97,6 +97,21 @@
       <i class="fas fa-filter"></i>
     </button>
     (Filter, geef alle zoekcriteria op)
+  </div>
+    <!-- ----------------------------- Vastklikken-->
+    <div style=" margin-top:10px">
+    <button type="button" class="btn btn-default margin-right-sm">
+      <i class="fas fa-thumbtack margin-right-sm"></i>Klik Vast
+    </button>
+
+    <button type="button" class="btn btn-secondary margin-right-sm">
+      <i class="fas fa-thumbtack margin-right-sm"></i>Klik Vast
+    </button>
+    <button type="button" title="Haal lijst op" class="btn btn-default">
+      <i class="fas fa-thumbtack"></i>
+    </button>
+
+    (Klik Vast: deze Filter blijft bewaardselectie blijft bewaart)
   </div>
   <!-- ----------------------------- Meer-->
   <div style=" margin-top:10px">
@@ -136,6 +151,17 @@
     (Bevestigen van scherm zonder opslaan)
   </div>
 
+    <!-- ----------------------------- Select All/none-->
+    <div style="display:flex; margin-top:10px">
+     <button type="button" title="Haal lijst op" class="btn btn-default margin-right-sm">
+      <i class="fas fa-map"></i>
+    </button>
+    <button type="button" title="Haal lijst op" class="btn btn-default margin-right-sm">
+    <i class="far fa-map"></i>
+  </button>
+  SelectAll/None
+  </div>
+
 <!-- --------NAVIGATIE-->
 <br/>
   <div><b> Navigatie </b></div>
@@ -143,7 +169,7 @@
 <!-- ----------------------------- NEXT-->
 <div style="display:flex; margin-top:10px">
   <div style="width:80px">
-    <div class="oz-knop margin-right-sm">
+    <div class="oz-knop margin-right-sm ">
       <i class="fa fa-arrow-left"></i>
     </div>
   </div>
@@ -249,38 +275,61 @@ overleden <i class="fas fa-cross"></i></div>
 </div>
   <!-- ----------------------------- Datumveld -->
   <div style="display:flex; margin-top:20px">
-    <input popovertitle="Fout" container="body" triggers="" containerclass="popover-error" placement="auto" type="date" class="form-control ng-pristine ng-valid ng-star-inserted ng-touched" ng-reflect-popover-title="Fout" ng-reflect-container="body" ng-reflect-triggers="" ng-reflect-container-class="popover-error" ng-reflect-placement="auto" ng-reflect-is-open="false" ng-reflect-model="2019-11-27"> Datumveld
+  <div class = "col-4">
+  Datumveld
+  </div>
+     <div class = "col-4">
+    <input popovertitle="Fout" container="body" triggers="" containerclass="popover-error" placement="auto" type="date" class="form-control ng-pristine ng-valid ng-star-inserted ng-touched" ng-reflect-popover-title="Fout" ng-reflect-container="body" ng-reflect-triggers="" ng-reflect-container-class="popover-error" ng-reflect-placement="auto" ng-reflect-is-open="false" ng-reflect-model="2019-11-27"> 
+    </div>
+ 
 </div>
 
 
   <!-- ----------------------------- dropdown -->
   <div style="display:flex; margin-top:20px">
+  <div class = "col-4">
+  dropdown
+  </div>
   <select _ngcontent-usi-c398="" id="reason" name="ReasonCode" required="" class="form-control ng-dirty ng-valid ng-touched" ng-reflect-required="" ng-reflect-name="ReasonCode" ng-reflect-model="KATZSCORE"><option _ngcontent-usi-c398="" value="null" disabled="" ng-reflect-value="null">-- Selecteer een waarde --</option><option _ngcontent-usi-c398="" value="1: ARTS" ng-reflect-ng-value="ARTS" class="ng-star-inserted"> Vraag van arts </option><option _ngcontent-usi-c398="" value="2: DEMENTSCRN" ng-reflect-ng-value="DEMENTSCRN" class="ng-star-inserted"> Screening dementie </option><option _ngcontent-usi-c398="" value="3: KATZSCORE" ng-reflect-ng-value="KATZSCORE" class="ng-star-inserted"> ifv Katzscore </option><option _ngcontent-usi-c398="" value="4: OPNAME" ng-reflect-ng-value="OPNAME" class="ng-star-inserted"> Opname </option><option _ngcontent-usi-c398="" value="5: RIZIV" ng-reflect-ng-value="RIZIV" class="ng-star-inserted"> Tussenkomst Riziv </option><!--bindings={
     "ng-reflect-ng-for-of": "[object Object],[object Object"
-  }--></select> dropdown
+  }--></select> 
    </div>
   <!-- ----------------------------- tekst -->
 <div style="display:flex; margin-top:20px">
+<div class = "col-4">
+tekst
+</div>
 <textarea name="Remark" class="form-control ng-pristine ng-valid ng-touched" ng-reflect-name="Remark"></textarea>tekst
 </div>
   <!-- ----------------------------- radiobutton -->
   <div style="display:flex; margin-top:20px">
-  todo radiobutton
+  <div class = "col-4">
+  Radiobutton
+  </div>
+  <div class = "col-4">
+  TODO
+  </div>
+   
   </div>
     <!-- ----------------------------- duimpjes -->
 <div style="display:flex; margin-top:20px">
-<div class="col-sm-3 col-5 text-center thumbs flex-row"><!--bindings={
-  "ng-reflect-ng-if": "false"
-}--><div class="circle col-padding-10 ng-star-inserted" style="background-color: rgb(215, 25, 27);"><i class="fa fa-minus"></i></div><!--bindings={
-  "ng-reflect-ng-if": "true"
-}--><i class="fa-thumbs-down pointer ng-star-inserted far" style="color: rgb(187, 187, 187);"></i><i class="fa-thumbs-up pointer ng-star-inserted fa" style="color: rgb(187, 187, 187);"></i><!--ng-container--><!--bindings={
-  "ng-reflect-ng-if": "true"
-}--><!--bindings={
-  "ng-reflect-ng-if": "false"
-}--><!--ng-container--><!--bindings={
-  "ng-reflect-ng-if": "true"
-}--></div> todo duimpjes
+<div class = "col-4">
+AAN/AF/GEEN SELECTIE (vb duimpjes)
 </div>
+<div>TODO</div>
+<div >
+  <p class="col-15 " style="background-color: rgb(187, 187, 187);">
+<i class="fa fa-minus">
+</i></p>
+<p class="col-15   " style="background-color: rgb(187, 0, 0);">
+<i class="fa fa-thumbs-down">
+</i></p>
+<p class="col-15 " style="background-color: rgb(0, 187, 0);">
+<i class="fa fa-thumbs-up">
+</i></p>
+</div> 
+</div>
+
   <!-- ----------------------------- xxx -->
   <div style="display:flex; margin-top:20px">
 
